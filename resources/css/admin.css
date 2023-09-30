@@ -1,0 +1,13 @@
+.menu-home{
+    background: rgba(71, 134, 243, 0.954);
+    height: 100%;
+  }
+  .aside{
+    background-image: radial-gradient(circle at 29.18% 70.82%, #acb5ef 0, #229ef6 50%, #fcfdfd 100%);
+    flex: 20%;
+    padding: 20px;
+    min-height: 90dvh;
+    color: rgb(182, 216, 247);
+    font-size: 1.5rem;
+
+}

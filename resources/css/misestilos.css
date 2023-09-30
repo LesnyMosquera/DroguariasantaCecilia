@@ -1,0 +1,199 @@
+/* Estos son mis estilos personalizados para el template index */
+.container-index{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-gap:10px;
+    margin-left: 30;
+
+}
+
+.color-b{
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.input-control{
+        border-style: none !important;
+        border-radius: 0.5rem;
+        width: 100%;
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+        display: block;
+
+
+}
+.btn-primary{
+    background: #00b09b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 0.5rem;
+    width: 25%;
+    border-radius: 1rem;
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: dotted;
+    margin-bottom: 0.75rem;
+}
+.btn-update{
+    background: #36D1DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 0.5rem;
+    width: 25%;
+    border-radius: 1rem;
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: dotted;
+    margin-bottom: 0.75rem;
+
+}
+
+.btn-delete{
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    padding: 0.5rem;
+    width: 25%;
+    border-radius: 1rem;
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: dotted;
+    margin-bottom: 0.75rem;
+
+}
+
+.btn-add{
+    background: #00c6ff;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0072ff, #00c6ff);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0072ff, #00c6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    padding: 0.5rem;
+    width: 25%;
+    border-radius: 1rem;
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: dotted;
+    margin-bottom: 0.75rem;
+
+}
+.btn-close{
+    background: #780206;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #061161, #780206);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #061161, #780206); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    padding: 0.5rem;
+    width: 25%;
+    border-radius: 1rem;
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: dotted;
+    margin-bottom: 0.75rem;
+
+}
+
+.btn-find{
+    background: #FF512F;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    padding: 0.5rem;
+    width: 25%;
+    border-radius: 1rem;
+    -webkit-text-fill-color: aliceblue;
+    text-decoration: dotted;
+    margin-bottom: 0.75rem;
+
+}
+.form-label{
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 35px blue, 0 0 15px darkblue;
+    border-style: outset;
+}
+.line-hr{
+        width: 100%;
+
+
+        margin: 25px auto;
+      }
+
+.card-image{
+    width: 450px;
+    height: 300px;
+   text-align: center;
+}
+
+.form-control{
+    border-radius: 0.50rem;
+    border-color: black;
+    width: 400;
+    padding-top: 2;
+    display: block;
+    margin-top: 0.50rem;
+    margin-bottom: 0.5rem;
+
+
+}
+.img-menu{
+
+    width: 50%;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.img-control{
+    width: 900px;
+    height: 700px;
+
+    margin: auto;
+}
+
+.color-blue{
+    color: #175eee;
+}
+.color-red{
+    color: #e40d0d;
+}
+
+.color-green{
+    color: #1fef0c;
+}
+.color-yellow{
+    color: #f5f908;
+}
+.color-black{
+    color: #00040c;
+}
+/* Layaut-admin*/
+.grid-container{
+    display: grid;
+    grid-template-columns: 25% 75%;
+    gap: 10px;
+    margin:  1rem;
+
+
+
+}
+
+
+.grid-item{
+   border: solid 2px;
+   border-radius: 0.5rem;
+   padding: 1rem;
+}
+.targe-menu{
+    display: grid;
+    grid-auto-rows: 600px; /*minmax(500px, auto);*/
+    overflow-y:scroll;
+}
+.grid-contents{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem;
+
+}
+.admin-footer{
+    grid-column: 1 / 3;
+}
