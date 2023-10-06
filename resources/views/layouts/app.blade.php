@@ -12,9 +12,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-
-
-
+        <link rel="stylesheet" href="sweetalert2.min.css">
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/css/admin.css','resources/js/app.js'])
@@ -25,6 +23,7 @@
     <script src="//unpkg.com/alpinejs" defer></script>
     </head>
     <body class="font-sans antialiased">
+
         <x-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -33,7 +32,7 @@
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                    <div class="px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
@@ -41,13 +40,28 @@
 
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="grid grid-cols-1 gap-3 mx-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 my-7">
 
+                    <div class="px-5 menu-admin aside" >
+                        <x-cp.menu-drop></x-cp.menu-drop>
+
+                    </div>
+
+                    <div class="grid-cols-1 px-5 pt-6 bg-blue-200 sm:col-span-5">
+
+                        {{ $slot }}
+
+
+                    </div>
+
+                    <div class="grid-cols-1 px-5 bg-orange-200 sm:col-span-6">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque a earum itaque accusamus cupiditate dignissimos enim id eveniet et, aspernatur debitis esse officia maiores velit laboriosam amet repellat molestiae nobis.</div>
+                </div>
             </main>
         </div>
 
         @stack('modals')
-
         @livewireScripts
+
     </body>
 </html>

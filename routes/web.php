@@ -1,7 +1,9 @@
 <?php
 
+use App\Livewire\Usuarios\Clientes;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Medicamentos\Laboratorio;
+use App\Livewire\Medicamentos\CreateLaboratorio;
 
 
 /*
@@ -28,3 +30,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::view('/cliente', 'drogueria.usuarios.clientes.index');
+route::get('clien', Clientes::class);
