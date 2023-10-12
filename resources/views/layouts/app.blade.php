@@ -16,6 +16,7 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/css/admin.css','resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('iconos/fontawesome-web/css/all.min.css') }}">
 
         <!-- Styles -->
         @livewireStyles
@@ -62,6 +63,6 @@
 
         @stack('modals')
         @livewireScripts
-
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     </body>
 </html>

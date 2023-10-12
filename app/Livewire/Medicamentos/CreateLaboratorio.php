@@ -9,9 +9,12 @@ use Livewire\WithFileUploads;
 class CreateLaboratorio extends Component
 {
     public $laboratorio, $descripcion, $imagen;
-    public $open=false;
+    public $mostrar=false;
     public $title="LABORATORIO";
     public $buscar;
+
+
+
 
 
 
