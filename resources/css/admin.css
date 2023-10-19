@@ -13,7 +13,7 @@
 }
 .container-card{
     display: grid;
-    grid-template-columns: 25% 75%;
+    grid-template-columns: 23% 75%;
     grid-gap:10px;
     padding: 4px;
     border-radius: 0.5rem;
@@ -29,4 +29,11 @@
 }
 .text-align-center{
     text-align: center;
+}
+.img-layout{
+    width: 450px;
+    height: 320px;
+    border-radius: 1em;
+
+
 }
