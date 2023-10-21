@@ -1,5 +1,6 @@
 <div>
     {{-- Inico del contenedor --}}
+
         <div role="alert">
             <div class="px-4 py-2 font-bold text-center text-white bg-blue-700 rounded-t">
                 {{ $title }}
@@ -33,33 +34,32 @@
                             <img src="{{ Storage::url($laboratorios->imagen) }}" alt="">
                            </div>
                            <div class="">
-                            <a href="" wire:click="set('modal','true')">
-
-
-                                <div class="flex pl-3 text-xl text-blue-700 bg-white">
+                               <div class="flex pl-3 text-xl text-blue-700 bg-white">
 
                                     {{$laboratorios->laboratorio}}
                                     </div>
 
-                                    <div class="">
-                                        {{$laboratorios->descripcion}}
+                                    <div class="pointer">
+                                        <button wire:click="editar({{ $laboratorios->id }})">{{$laboratorios->descripcion}}</button>
                                     </div>
-                            </a>
-
-                            </div>
+                                 </div>
                         </div>
 
                     </div>
                     @endforeach
-                    <div class="flex justify-center ">
+                    <div class="flex">
 
-                        {{ $lab->links()}}
+                    </div>
+                    <div class="flex justify-items-center">
+                        {{$lab->links()}}
+
                     </div>
 
             </div>
           </div>
 
         <p></p>
+
           @if ($modal==true)
 
           <x-cp.modal>
