@@ -63,6 +63,21 @@
 
         @stack('modals')
         @livewireScripts
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            Livewire.on('saveLaboratorio'){
+                Swal.fire(
+            'The Internet?',
+            'el Archivo se guardó correctamente',
+            'question'
+          )
+            }
+
+
+        </script>
+
     </body>
+
+
 </html>

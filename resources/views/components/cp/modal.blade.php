@@ -12,7 +12,9 @@
                 <hr>
                </div>
                <div class="flex justify-end gap-3 pt-3">
-                <x-danger-button>Salir</x-danger-button>
+                <x-danger-button wire:click="set('modal',false)">Salir</x-danger-button>
+                <x-danger-button wire:click="delete()">Eliminar</x-danger-button>
+
                 <x-cp.success-button> Actualizar</x-cp.success-button>
                </div>
            </div>

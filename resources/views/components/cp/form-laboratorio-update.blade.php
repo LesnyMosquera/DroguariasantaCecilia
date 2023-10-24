@@ -18,7 +18,7 @@
                 </div>
                             <div class="mt-2">
                                 <label for="descripcion" class="">Descripción</label>
-                                <x-textarea wire:model.live="descripcion"  placeholder="Descripcion del laboratorio" />
+                                <x-textarea wire:model="descripcion"  placeholder="Descripcion del laboratorio" />
                             </div>
                             <div class="mt-3">
                                 <input type="file" wire:model.live="imagen" accept="image/png, image/jpg, image/jpeg, image/gif, image/bpm, image/svg, image/avif">

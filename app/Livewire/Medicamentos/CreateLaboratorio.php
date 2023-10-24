@@ -13,10 +13,11 @@ class CreateLaboratorio extends Component
     public $laboratorio, $descripcion, $imagen;
     public $labEdit;
     public $mostrar=0;
-    public $modal=false;
+    public $modal;
     public $title="LABORATORIO";
     public $buscar;
     public $imagenName='Avatar'.'aviif';
+    
 
     public function saveLaboratorio(){
 
@@ -29,6 +30,7 @@ class CreateLaboratorio extends Component
             $imagenName='laboratorio/'.uniqid().'.'.$this->imagen->extension();
             $this->imagen->storeAs('public',$imagenName);
         }
+
         Laboratorio::create([
              'laboratorio' => $this->laboratorio,
              'descripcion' => $this->descripcion,
@@ -37,6 +39,7 @@ class CreateLaboratorio extends Component
             ]);
             $this->reset();
        }
+
        public function resetForm(){
         $this->reset();
        }
@@ -45,10 +48,23 @@ class CreateLaboratorio extends Component
         $lab=Laboratorio::where('laboratorio', 'like', '%'.$this->buscar .'%')->paginate(20);
         return view('livewire.medicamentos.create-laboratorio', compact('lab'));
     }
+
     public function editar(Laboratorio $lab) {
         $resultado=$this->laboratorio = $lab;
 
+
         $this->modal='true';
+    }
+
+    public function cerrarModal() {
+
+        $this->modal='false';
+    }
+    public function delete($id){
+        Laboratorio::find($id)->delete();
+
+
+
     }
 
 }

@@ -6,8 +6,11 @@
 
     </x-slot>
 
+    <div class="py-12">
+        <div class="mx-auto ml-10 mr-10 max-w-8xl sm:px-6 lg:px-8">
+            <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
 
-               {{ $slot }}
+               {{ $slot }} 
             </div>
         </div>
     </div>
