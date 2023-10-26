@@ -11,19 +11,31 @@ class CreateLaboratorio extends Component
 {
     use WithFileUploads;
     public $laboratorio, $descripcion, $imagen;
-    public $labEdit;
-    public $mostrar=0;
-    public $modal;
+    public $mostrar=0; //Variable para mostrar u ocultar el formulario de crear
+    public $modal=false;
     public $title="LABORATORIO";
     public $buscar;
     public $imagenName='Avatar'.'aviif';
-    
+    public $updateLab; //variable para actualizar y eliminar
+    public $open=false;
+
+
+    public function clearForm(){
+
+       $borrar=[
+            'laboratorio'=> '',
+            'descripcion'=> '',
+            'imagen'=> '',
+        ];
+    }
+
+
 
     public function saveLaboratorio(){
 
         $this->validate([
             'laboratorio' =>'required|min:2|max:20',
-            'imagen'=>'image|min:10|max:4096'
+            'imagen'=>'image|min:1|max:4096'
 
         ]);
         if($this->imagen){
@@ -37,12 +49,10 @@ class CreateLaboratorio extends Component
              'imagen' => $imagenName,
 
             ]);
-            $this->reset();
+            $this->open=true;
        }
 
-       public function resetForm(){
-        $this->reset();
-       }
+
     public function render()
     {
         $lab=Laboratorio::where('laboratorio', 'like', '%'.$this->buscar .'%')->paginate(20);
@@ -50,21 +60,30 @@ class CreateLaboratorio extends Component
     }
 
     public function editar(Laboratorio $lab) {
-        $resultado=$this->laboratorio = $lab;
-
-
-        $this->modal='true';
+    $this->laboratorio=$lab->laboratorio;
+    $this->descripcion=$lab->descripcion;
+    $this->imagen=$lab->imagen;
+    $this->updateLab=$lab->id;
+    $this->modal='true';
     }
 
-    public function cerrarModal() {
+    public function updateLaboratorio() {
 
-        $this->modal='false';
+        $actualizarlab=Laboratorio::find($this->updateLab);
+        if($this->imagen){
+            $imagenName='laboratorio/'.uniqid().'.'.$this->imagen->extension();
+            $this->imagen->storeAs('public',$imagenName);
+        }
+        $actualizarlab->update([
+            'laboratorio' => $this->laboratorio,
+            'descripcion' => $this->descripcion,
+            'imagen' => $imagenName,
+        ]);
+
     }
-    public function delete($id){
-        Laboratorio::find($id)->delete();
-
-
-
+    public function delete(){
+        Laboratorio::find($this->updateLab)->delete();
+       $this->modal=false;
     }
 
 }

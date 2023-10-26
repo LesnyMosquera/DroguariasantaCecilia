@@ -25,12 +25,12 @@
                                 <x-textarea wire:model="descripcion"  placeholder="Descripcion del laboratorio" />
                             </div>
                             <div class="mt-3">
-                                <input type="file" wire:model="imagen" accept="image/png, image/jpg, image/jpeg, image/gif, image/bpm, image/svg, image/avif">
+                                <input type="file" wire:model.live="imagen" accept="image/png, image/jpg, image/jpeg, image/gif, image/bpm, image/svg, image/avif">
                                 <x-input-error for="imagen"/>
                             </div>
                             <div class="text-right">
                                 <x-danger-button class="mr-5" wire:click="$set('mostrar',0)">Ocultar</x-danger-button>
-                                <x-cp.success-button wire:click="$dispatchTo('saveLaboratorio')" >Guardar</x-cp.success-button>
+                                <x-cp.success-button wire:click="saveLaboratorio" >Guardar</x-cp.success-button>
                             </div>
 
             </form>{{-- Care about people's approval and you will be their prisoner. --}}

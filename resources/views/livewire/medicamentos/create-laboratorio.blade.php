@@ -26,7 +26,7 @@
                 <div class="grid grid-cols-1 gap-5 mr-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
                    @foreach($lab as $laboratorios )
 
-                   <div class="bg-blue-400 border border-white rounded">
+                   <div class="bg-blue-400 border border-white rounded" wire:key="laboratorio-{{ $laboratorios->id}}"">
 
                        <div class="container-card ">
                            <div class="flex ">
@@ -65,6 +65,18 @@
 
           </x-cp.modal>
           @endif
+          <x-dialog-modal wire:model="open">
+            <x-slot name="title">
+
+            </x-slot>
+            <x-slot name="content">
+
+            </x-slot>
+            <x-slot name="footer">
+
+            </x-slot>
+
+          </x-dialog-modal>
 
     </div>
     {{-- Fin del contenedor --}}
