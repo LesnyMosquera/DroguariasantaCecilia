@@ -3,6 +3,7 @@
 use App\Livewire\Usuarios\Clientes;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Medicamentos\Laboratorio;
+use App\Http\Controllers\CategoriaController;
 use App\Livewire\Medicamentos\CreateLaboratorio;
 
 
@@ -33,3 +34,4 @@ Route::middleware([
 
 Route::view('/cliente', 'drogueria.usuarios.clientes.index');
 route::get('clien', Clientes::class);
+Route::resource('categoria', CategoriaController::class);

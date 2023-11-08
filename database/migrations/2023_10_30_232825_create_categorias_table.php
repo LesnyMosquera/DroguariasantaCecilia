@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('via_administracions', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->string('administracion')->unique();
-            $table->text('descripcion')->nullable();
-            $table->string('imagen')->nullable();
+            $table->string('categoria')->uniqued();
+            $table->string('descripcion')->nullable('Ninguna');
+            $table->string('imagen')->nullable('Ninguna');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('via_administracions');
+        Schema::dropIfExists('categorias');
     }
 };

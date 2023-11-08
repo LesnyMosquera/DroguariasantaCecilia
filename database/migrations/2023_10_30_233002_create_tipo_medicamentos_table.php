@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('presentacions', function (Blueprint $table) {
+        Schema::create('tipo_medicamentos', function (Blueprint $table) {
             $table->id();
-            $table->string('presentacion')->unique();
-            $table->text('descripcion')->nullable();
-            $table->string('imagen')->nullable();
+            $table->string('tipoMedicamento')->unique();
+            $table->string('descripcion')->nullable('No Existe Observación');
+            $table->string('imagen')->nullable('Ninguna');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('presentacions');
+        Schema::dropIfExists('tipo_medicamentos');
     }
 };
