@@ -65,18 +65,7 @@
 
           </x-cp.modal>
           @endif
-          <x-dialog-modal wire:model="open">
-            <x-slot name="title">
-
-            </x-slot>
-            <x-slot name="content">
-
-            </x-slot>
-            <x-slot name="footer">
-
-            </x-slot>
-
-          </x-dialog-modal>
+          
 
     </div>
     {{-- Fin del contenedor --}}

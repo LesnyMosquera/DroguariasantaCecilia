@@ -16,6 +16,30 @@
             <x-slot name="title" class="">
                 Crear categoria
             </x-slot>
+            <x-slot name="slot">
+                <div class="grid grid-cols-3">
+                    <div class="mb-4 mr-2 border rounded-md">
+
+                      <img src="asset('')" alt="" srcset="">
+                      
+                    </div>
+                    <div class="grid col-span-2 text-black">
+                        <x-label> Categoria</x-label>
+                     <x-input class="mb-4"/>
+
+                     <x-label> Descripcion</x-label>
+                        <x-input class="mb-4" />
+
+                        <x-label>Imagen</x-label>
+                        <x-input class="mb-4" type="file" />
+              </div>
+
+               </div>
+               <hr>
+               <div class="flex justify-end gap-3 pt-3" >
+            <x-danger-button>Salir</x-danger-button>
+
+            </x-slot>
 
             <x-slot name="footer">
                 <x-cp.success-button>Guardar</x-cp.success-button>
@@ -28,7 +52,7 @@
 
 
 
-            </x-cp-cewire:model=>
+
             <button wire:click="$set('modal','false')">Abrir</button>
 
             {{-- muestra y/o culta el formuario para agregar laboratorios --}}
