@@ -8,10 +8,10 @@ class ShowCategoria extends Component
 {
     public $title="Categoria";
     public $mostrar=0;
-    public $modal = false;
+    public $open =true;
     public $buscar="hola busqueda";
     public function mount(){
-        $this->modal = "true";
+
     }
     public function render()
     {

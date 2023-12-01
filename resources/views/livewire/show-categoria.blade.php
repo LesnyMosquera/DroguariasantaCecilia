@@ -13,58 +13,55 @@
                 </x-cp.success-button>
             </x-cp.buscador>
           <x-cp.create-modal>
-            <x-slot name="title" class="">
-                Crear categoria
-            </x-slot>
-            <x-slot name="slot">
-                <div class="grid grid-cols-3">
-                    <div class="mb-4 mr-2 border rounded-md">
 
-                      <img src="asset('')" alt="" srcset="">
-                      
-                    </div>
-                    <div class="grid col-span-2 text-black">
-                        <x-label> Categoria</x-label>
-                     <x-input class="mb-4"/>
+                    <form action="{{route('categoria.create')}}" method="post">
+                        @csrf
+                        <x-slot name="title" class="">
+                            Crear categoria
+                        </x-slot>
+                        <x-slot name="slot">
+                            <div class="grid grid-cols-4">
+                                <div class="col-span-2 mb-4 mr-6 border rounded-md">
+                                    <div class="m-2 text-black">
+                                        procesos comunes que manejan las organizaciones mientras se registran y avanzan estos procesos.
 
-                     <x-label> Descripcion</x-label>
-                        <x-input class="mb-4" />
+                                    </div>
+                                        <img src="{{ asset('/storage/imagenes/categoria/categoria.png') }}"  class="border rounded-md ">
+                                    </div>
+                                <div class="grid col-span-2 text-black">
+                                    <x-label> Categoria</x-label>
+                                    <x-input class="mb-4"/>
 
-                        <x-label>Imagen</x-label>
-                        <x-input class="mb-4" type="file" />
-              </div>
+                                    <x-label> Descripcion</x-label>
+                                    <x-textarea> </x-textarea>
 
-               </div>
-               <hr>
-               <div class="flex justify-end gap-3 pt-3" >
-            <x-danger-button>Salir</x-danger-button>
+                                    <x-label>Imagen</x-label>
+                                    <x-input class="mb-4" type="file" />
+                                </div>
+                        </div>
+                        <hr>
+                        <div class="flex justify-end gap-3 pt-3" >
+                                <x-danger-button  wire:click="set('open',false)">Salir</x-danger-button>
 
-            </x-slot>
+                        </x-slot>
 
-            <x-slot name="footer">
-                <x-cp.success-button>Guardar</x-cp.success-button>
-            </x-slot>
+                        <x-slot name="footer">
+                            <x-cp.success-button type="submit">Guardar</x-cp.success-button>
+                        </x-slot>
 
+                    </form>
 
-          </x-cp.create-modal>
-
-
-
-
-
-
+            </x-cp.create-modal>
             <button wire:click="$set('modal','false')">Abrir</button>
-
-            {{-- muestra y/o culta el formuario para agregar laboratorios --}}
+            {{-- muestra y/o culta el formuario para agregar Categorias --}}
             @switch($mostrar)
                 @case(1)
                   <x-cp.form-laboratorio/>
-
                 @break
                 @default
             @endswitch
 
-            {{ $modal}}
+
 
             {{-- muestra el listado de laboratorios --}}
 </div>
